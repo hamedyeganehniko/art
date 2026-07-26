@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIANA ROSE • Visual Artist | journal</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./journal.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/engine@4/tsparticles.engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@4/tsparticles.slim.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header id="mainHeader" role="banner">
+  <div class="gold-top-bar" aria-hidden="true">
+    <span class="diamond"></span>
+  </div>
+  <div id="header-particles"></div>
+  <div class="glow-orb"></div>
+  <div class="glow-orb-left"></div>
+  <div class="header-inner">
+    <div class="top-row">
+      <a href="index.html" class="logo" id="logoEl" aria-label="Homepage">
+        <span class="artist-name">HANA YEGANEH</span>
+        <span class="subtitle">Visual Artist · London</span>
+      </a>
+      <div class="right-group" id="rightGroup">
+        <div class="search-container">
+          <div class="search-box" id="searchBox">
+            <i class="fas fa-palette"></i>
+            <input type="text" id="searchInput" placeholder="Search artworks..." aria-label="Search">
+          </div>
+        </div>
+        <div class="ctas">
+          <a href="index.html#masonryGallery" class="cta-btn"><i class="fas fa-image"></i> <span>GALLERY</span></a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+          <span class="toggle-label" id="themeLabel">DAY</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="bottom-row" id="bottomNav">
+      <nav>
+        <ul class="nav-list" id="navList">
+          <li class="nav-item" data-page="home">
+            <a href="index.html"><span>HOME</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="works">
+            <a href="work.html"><span>WORKS</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="gallery">
+            <a href="gallery.html"><span>GALLERY</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="about">
+            <a href="about.html"><span>ABOUT</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item active" data-page="journal">
+            <a href="journal.html"><span>JOURNAL</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="contact">
+            <a href="contact.html"><span>CONTACT</span><span class="nav-dot"></span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</header>
+
+<div class="mobile-overlay" id="mobileOverlay">
+  <button class="close-overlay" id="closeOverlay" aria-label="Close menu">
+    <i class="fas fa-times"></i>
+  </button>
+  <ul class="mobile-nav" id="mobileNav">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="work.html">WORKS</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li class="active"><a href="journal.html">JOURNAL</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+  <div class="divider"></div>
+  <div style="margin-top:1.2rem; font-family: 'Cinzel', serif; font-size:0.65rem; letter-spacing:0.2em; color:var(--text-soft); opacity:0.6;">
+    <i class="fas fa-palette" style="color:var(--pink-rose); margin-right:8px;"></i> Studio · London
+  </div>
+</div>
+  <section class="journal-hero" id="journalHero" role="banner">
+    <div id="hero-particles"></div>
+
+    <div class="hero-label">JOURNAL</div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Studio Notes</h1>
+      <div class="gold-divider" aria-hidden="true"></div>
+      <p class="hero-desc">
+        Thoughts, stories, and glimpses behind the canvas.<br />
+        A personal archive of the creative journey.
+      </p>
+    </div>
+
+    <div class="hero-date">2025 · Issue 01</div>
+  </section>
+
+  <div style="max-width: 800px; margin: 3rem auto 1rem; text-align: center; font-family: 'Cormorant Garamond', serif; color: var(--text-primary); opacity: 0.5; font-size: 0.9rem; border-top: 1px solid var(--glass-border); padding-top: 2rem;">
+    <i class="fas fa-feather-alt" style="color: var(--gold); margin-right: 6px;"></i> 
+    The journal is a living archive — each entry a brushstroke.
+  </div>
+
+
+
+
+
+
+  <section class="vlog-section" id="vlogSection">
+    <div class="section-header">
+      <span class="sub-label">✦ Behind the Lens ✦</span>
+      <h2>Studio Vlog</h2>
+      <div class="divider-line" aria-hidden="true"></div>
+    </div>
+
+    <div class="video-grid" id="videoGrid">
+    </div>
+  </section>
+
+  <div class="video-modal" id="videoModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close video">
+        <i class="fas fa-times"></i>
+      </button>
+      <video id="modalVideo" controls playsinline></video>
+      <div class="modal-meta">
+        <h3 id="modalTitle">A Day in the Studio</h3>
+        <span id="modalDate">15 Mar 2025</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <section class="reading-section" id="readingSection">
+    <div class="section-header">
+      <span class="sub-label">✦ Books That Inspire ✦</span>
+      <h2>Reading List</h2>
+      <div class="divider-line" aria-hidden="true"></div>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carouselTrack">
+      </div>
+    </div>
+
+    <div class="carousel-nav">
+      <button class="nav-arrow" id="prevArrow" aria-label="Previous books">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="nav-arrow" id="nextArrow" aria-label="Next books">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+    <footer class="footer-section" id="footerSection" role="contentinfo">
+        <div id="footer-particles"></div>
+
+        <div class="footer-inner">
+            <div class="gold-bar" aria-hidden="true">
+                <span class="diamond"></span>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col-1 glass-reflection">
+                    <div class="artist-name">Hana Yeganeh</div>
+                    <div class="title">Visual Artist · London</div>
+                    <p class="bio">Capturing the dialogue between light and shadow, memory and dream. Each canvas is a whispered story.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <div class="heading">Explore</div>
+                    <ul class="link-list">
+                        <li><a href="#"><i class="fas fa-paint-brush"></i> Gallery</a></li>
+                        <li><a href="#"><i class="fas fa-feather-alt"></i> Commission</a></li>
+                        <li><a href="#"><i class="fas fa-user"></i> About</a></li>
+                        <li><a href="#"><i class="fas fa-pen-fancy"></i> Journal</a></li>
+                        <li><a href="#"><i class="fas fa-store"></i> Shop</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-3">
+                    <div class="newsletter-title">Join the Inner Circle</div>
+                    <div class="newsletter-sub">First access to new works, studio news & private views.</div>
+                    <form class="newsletter-form" id="newsletterForm" novalidate>
+                        <div class="input-group">
+                            <input type="email" placeholder="Your email address" aria-label="Email address" required>
+                        </div>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                        <div class="privacy-notice">Your privacy is sacred. No spam, ever.</div>
+                    </form>
+                </div>
+            </div>
+            <div class="featured-section">
+                <span class="featured-label">As Featured In</span>
+                <div class="brands">
+                    <span>VOGUE</span>
+                    <span>ARTFORUM</span>
+                    <span>HARPER'S BAZAAR</span>
+                    <span>THE GUARDIAN</span>
+                    <span>SOTHEBY'S</span>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <span>© 2025 Hana Yeganeh. All rights reserved.</span>
+                <span>
+                    <span class="diamond-deco">◆</span>
+                    <span class="made-with">Made with ✦ in London</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+<script src="script.js"></script>
+<script src="journal.js"></script>
+<script src="footer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>        (function() {
+      'use strict';
+      const videos = [
+        {
+          title: 'A Day in the Studio',
+          duration: '12:34',
+          date: '15 Mar 2025',
+          desc: 'Watch the creative process unfold from morning light to final brushstroke.',
+          thumbnail: 'https://picsum.photos/id/101/800/450',
+          videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        },
+        {
+          title: 'Mixing Colors: A Study',
+          duration: '08:21',
+          date: '1 Mar 2025',
+          desc: 'Exploring the alchemy of pigments and the magic of color theory.',
+          thumbnail: 'https://picsum.photos/id/102/800/450',
+          videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        },
+        {
+          title: 'The Art of Patience',
+          duration: '15:47',
+          date: '15 Feb 2025',
+          desc: 'A meditation on slow painting and the beauty of taking time.',
+          thumbnail: 'https://picsum.photos/id/104/800/450',
+          videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+        }
+      ];
+
+      const grid = document.getElementById('videoGrid');
+      if (!grid) return;
+
+      videos.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'video-card';
+        card.dataset.index = index;
+        card.dataset.delay = (index * 120) % 360;
+
+        card.innerHTML = `
+          <div class="video-thumbnail">
+            <img src="${item.thumbnail}" alt="${item.title}" loading="lazy" />
+            <span class="duration-badge">${item.duration}</span>
+            <div class="play-btn"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="video-content">
+            <div class="video-title">${item.title}</div>
+            <div class="video-meta">
+              <span class="video-date"><i class="far fa-calendar-alt" style="margin-right:4px;"></i>${item.date}</span>
+              <span class="video-duration">${item.duration}</span>
+            </div>
+            <div class="video-desc">${item.desc}</div>
+          </div>
+        `;
+
+        card.dataset.videoUrl = item.videoUrl;
+        card.dataset.videoTitle = item.title;
+        card.dataset.videoDate = item.date;
+
+        grid.appendChild(card);
+      });
+
+      const cards = document.querySelectorAll('.video-card');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const delay = parseInt(el.dataset.delay) || 0;
+            setTimeout(() => {
+              el.classList.add('visible');
+            }, delay);
+            observer.unobserve(el);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      cards.forEach(card => observer.observe(card));
+
+      setTimeout(() => {
+        cards.forEach(card => {
+          if (!card.classList.contains('visible')) {
+            const rect = card.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.85) {
+              const delay = parseInt(card.dataset.delay) || 0;
+              setTimeout(() => card.classList.add('visible'), delay);
+            }
+          }
+        });
+      }, 400);
+
+      const modal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDate = document.getElementById('modalDate');
+      const modalClose = document.getElementById('modalClose');
+      let currentVideo = null;
+
+      function openModal(videoUrl, title, date) {
+        modalVideo.src = videoUrl;
+        modalTitle.textContent = title;
+        modalDate.textContent = date;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        modalVideo.play().catch(() => {});
+      }
+
+      function closeModal() {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+        modalVideo.pause();
+        modalVideo.src = '';
+      }
+
+      cards.forEach(card => {
+        card.addEventListener('click', function() {
+          const url = this.dataset.videoUrl;
+          const title = this.dataset.videoTitle;
+          const date = this.dataset.videoDate;
+          if (url) openModal(url, title, date);
+        });
+      });
+
+      modalClose.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('open')) {
+          closeModal();
+        }
+      });
+
+      console.log('✨ Studio Vlog · ' + videos.length + ' videos loaded');
+    })();</script>
+      <script>
+    (function() {
+      'use strict';
+
+      const books = [
+        {
+          title: 'The Art of Color',
+          author: 'Johannes Itten',
+          quote: 'Understanding color is understanding emotion.'
+        },
+        {
+          title: 'Ways of Seeing',
+          author: 'John Berger',
+          quote: 'How we look at art shapes what we see.'
+        },
+        {
+          title: 'The Creative Act',
+          author: 'Rick Rubin',
+          quote: 'Creativity is not a talent, it\'s a way of being.'
+        },
+        {
+          title: 'Color and Light',
+          author: 'James Gurney',
+          quote: 'Light is the source of all color and mood.'
+        },
+        {
+          title: 'The Story of Art',
+          author: 'E.H. Gombrich',
+          quote: 'Art history is the history of human vision.'
+        }
+      ];
+
+      const track = document.getElementById('carouselTrack');
+      const dotsContainer = document.getElementById('carouselDots');
+      const prevBtn = document.getElementById('prevArrow');
+      const nextBtn = document.getElementById('nextArrow');
+
+      let currentIndex = 0;
+      let autoPlayInterval = null;
+      const autoPlayDelay = 5000;
+      let cardsPerView = 3;
+      let totalCards = books.length;
+
+      function getCardsPerView() {
+        const width = window.innerWidth;
+        if (width < 480) return 1;
+        if (width < 768) return 2;
+        if (width < 1024) return 2;
+        return 3;
+      }
+
+      function buildCarousel() {
+        track.innerHTML = '';
+        dotsContainer.innerHTML = '';
+
+        books.forEach((book, index) => {
+          const card = document.createElement('div');
+          card.className = 'book-card';
+          card.dataset.index = index;
+          card.innerHTML = `
+            <div class="book-icon"><i class="fas fa-book-open"></i></div>
+            <div class="book-title">${book.title}</div>
+            <div class="book-author">${book.author}</div>
+            <div class="book-divider" aria-hidden="true"></div>
+            <div class="book-quote">${book.quote}</div>
+          `;
+          track.appendChild(card);
+
+          const dot = document.createElement('span');
+          dot.className = 'dot';
+          dot.dataset.index = index;
+          dot.addEventListener('click', () => goTo(index));
+          dotsContainer.appendChild(dot);
+        });
+
+        updateCarousel();
+        updateDots();
+      }
+
+      function updateCarousel() {
+        cardsPerView = getCardsPerView();
+        const cardWidth = track.querySelector('.book-card')?.offsetWidth || 0;
+        const gap = 32; // 2rem gap
+        const offset = currentIndex * (cardWidth + gap);
+        track.style.transform = `translateX(-${offset}px)`;
+
+        const allCards = track.querySelectorAll('.book-card');
+        allCards.forEach((card, i) => {
+          const isActive = i >= currentIndex && i < currentIndex + cardsPerView;
+          card.classList.toggle('active', isActive);
+        });
+
+        updateDots();
+        updateButtons();
+      }
+
+      function updateDots() {
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentIndex);
+        });
+      }
+
+      function updateButtons() {
+        const maxIndex = Math.max(0, totalCards - cardsPerView);
+        prevBtn.classList.toggle('disabled', currentIndex === 0);
+        nextBtn.classList.toggle('disabled', currentIndex >= maxIndex);
+      }
+
+      function goTo(index) {
+        const maxIndex = Math.max(0, totalCards - cardsPerView);
+        const target = Math.max(0, Math.min(index, maxIndex));
+        if (target === currentIndex) return;
+        currentIndex = target;
+        updateCarousel();
+        resetAutoPlay();
+      }
+
+      function goNext() {
+        const maxIndex = Math.max(0, totalCards - cardsPerView);
+        if (currentIndex < maxIndex) {
+          goTo(currentIndex + 1);
+        } else {
+          goTo(0);
+        }
+      }
+
+      function goPrev() {
+        if (currentIndex > 0) {
+          goTo(currentIndex - 1);
+        } else {
+          const maxIndex = Math.max(0, totalCards - cardsPerView);
+          goTo(maxIndex);
+        }
+      }
+
+      function startAutoPlay() {
+        if (autoPlayInterval) clearInterval(autoPlayInterval);
+        autoPlayInterval = setInterval(goNext, autoPlayDelay);
+      }
+
+      function resetAutoPlay() {
+        if (autoPlayInterval) {
+          clearInterval(autoPlayInterval);
+          startAutoPlay();
+        }
+      }
+
+      function stopAutoPlay() {
+        if (autoPlayInterval) {
+          clearInterval(autoPlayInterval);
+          autoPlayInterval = null;
+        }
+      }
+
+      prevBtn.addEventListener('click', goPrev);
+      nextBtn.addEventListener('click', goNext);
+      const wrapper = document.querySelector('.carousel-wrapper');
+      wrapper.addEventListener('mouseenter', stopAutoPlay);
+      wrapper.addEventListener('mouseleave', startAutoPlay);
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const newCardsPerView = getCardsPerView();
+          if (newCardsPerView !== cardsPerView) {
+            cardsPerView = newCardsPerView;
+            updateCarousel();
+          }
+        }, 200);
+      });
+      buildCarousel();
+      startAutoPlay();
+      console.log('✨ Reading List · ' + books.length + ' books loaded');
+    })();
+  </script>
+</body>
+</html>

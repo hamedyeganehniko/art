@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIANA ROSE • Visual Artist</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./slider.css">
+    <link rel="stylesheet" href="Commission.css">
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="new-2.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/engine@4/tsparticles.engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@4/tsparticles.slim.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+
+<header id="mainHeader" role="banner">
+
+
+  <div class="gold-top-bar" aria-hidden="true">
+    <span class="diamond"></span>
+  </div>
+
+  <div id="header-particles"></div>
+
+  <div class="glow-orb"></div>
+  <div class="glow-orb-left"></div>
+
+  <div class="header-inner">
+    <div class="top-row">
+      <a href="index.html" class="logo" id="logoEl" aria-label="Homepage">
+        <span class="artist-name">HANA YEGANEH</span>
+        <span class="subtitle">Visual Artist · London</span>
+      </a>
+
+      <div class="right-group" id="rightGroup">
+        <div class="search-container">
+          <div class="search-box" id="searchBox">
+            <i class="fas fa-palette"></i>
+            <input type="text" id="searchInput" placeholder="Search artworks..." aria-label="Search">
+          </div>
+        </div>
+
+        <div class="ctas">
+          <a href="index.html#masonryGallery" class="cta-btn"><i class="fas fa-image"></i> <span>GALLERY</span></a>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+          <span class="toggle-label" id="themeLabel">DAY</span>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="bottom-row" id="bottomNav">
+      <nav>
+        <ul class="nav-list" id="navList">
+          <li class="nav-item active" data-page="home">
+            <a href="index.html"><span>HOME</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="works">
+            <a href="work.html"><span>WORKS</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="gallery">
+            <a href="gallery.html"><span>GALLERY</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="about">
+            <a href="about.html"><span>ABOUT</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="journal">
+            <a href="journal.html"><span>JOURNAL</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="contact">
+            <a href="contact.html"><span>CONTACT</span><span class="nav-dot"></span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</header>
+
+<div class="mobile-overlay" id="mobileOverlay">
+  <button class="close-overlay" id="closeOverlay" aria-label="Close menu">
+    <i class="fas fa-times"></i>
+  </button>
+  <ul class="mobile-nav" id="mobileNav">
+    <li class="active"><a href="index.html">HOME</a></li>
+    <li><a href="work.html">WORKS</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="journal.html">JOURNAL</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+  <div class="divider"></div>
+  <div style="margin-top:1.2rem; font-family: 'Cinzel', serif; font-size:0.65rem; letter-spacing:0.2em; color:var(--text-soft); opacity:0.6;">
+    <i class="fas fa-palette" style="color:var(--pink-rose); margin-right:8px;"></i> Studio · London
+  </div>
+</div>
+
+
+
+<section class="hero-slider-section" style="margin-top: 130px;">
+  <div class="hero-slider-wrapper" id="heroSliderWrapper">
+    <div class="hero-slider" id="heroSlider" role="region" aria-label="Hana Yeganeh Visual Artist Portfolio">
+      <div id="slidesContainer"></div>
+      <div id="tsparticles"></div>
+      
+      <div class="nav-controls">
+        <button class="nav-btn" id="prevBtn" aria-label="Previous slide">‹</button>
+        <div class="indicators" id="indicatorsContainer" role="tablist"></div>
+        <button class="nav-btn" id="nextBtn" aria-label="Next slide">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="gallery-section" id="masonryGallery">
+    <div class="gallery-header">
+      <h2>
+        <span class="accent-icon">✦</span> Featured Works
+      </h2>
+      <span class="sub"><i class="fas fa-arrow-right"></i> 2024 – 2025</span>
+    </div>
+
+    <div class="masonry-grid" id="masonryGrid">
+    </div>
+  </section>
+
+  <section class="about-section" id="aboutSection">
+    <div class="about-container">
+      <div class="portrait-wrapper" id="portraitWrapper">
+        <img
+          class="portrait-image"
+          src="img-art/artist.png"
+          alt="Hana Yeganeh in her studio"
+          loading="lazy"
+        />
+        <div class="grain-overlay"></div>
+      </div>
+
+      <div class="story-content">
+        <div class="studio-label"><i class="fas fa-feather-alt" style="margin-right: 8px;"></i> Studio Diary · 2025</div>
+        <h1 class="artist-heading">Hana Yeganeh</h1>
+
+        <div class="typewriter-container" id="typewriter"></div>
+
+        <div class="bio-text" id="bioText">
+          Born in London, Hana Yeganeh is a visual artist whose work explores the delicate tension between light and shadow, memory and dream. Her paintings have been exhibited internationally and are held in private collections across Europe and the Middle East.
+        </div>
+
+        <div class="quote-block">“Every canvas is a conversation with time.”</div>
+        <div class="signature">Hana Yeganeh</div>
+
+        <div class="action-buttons">
+          <a href="#" class="action-btn"><i class="fas fa-file-alt"></i> View CV</a>
+          <a href="#" class="action-btn"><i class="fas fa-pen-fancy"></i> Contact Studio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+  <section class="shop-slider-section" id="shopSlider">
+    <div class="shop-header">
+      <h2>Shop the Collection</h2>
+      <p>Original works &amp; limited edition prints</p>
+    </div>
+
+    <div class="slider-wrapper" id="sliderWrapper">
+      <div class="slider-track" id="sliderTrack">
+      </div>
+    </div>
+
+    <div class="slider-nav">
+      <button class="nav-arrow" id="prevSlide" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+      <div class="dots" id="dotsContainer"></div>
+      <span class="slide-counter" id="slideCounter">1 / 8</span>
+      <button class="nav-arrow" id="nextSlide" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+
+  <div class="commission-wrapper">
+  <section class="commission-section" id="commissionSection">
+    <div id="commission-particles"></div>
+
+    <div class="commission-grid">
+      <div class="panel panel-left">
+        <div class="commission-label">COMMISSION · 2025</div>
+        <h2 class="commission-heading">Your Vision<br>on Canvas</h2>
+        <p class="commission-desc">
+          Every custom painting begins with a conversation. Share your story, your memories, your emotions — and I will translate them into a visual poem. From the first sketch to the final brushstroke, your artwork is crafted with intention, patience, and love.
+        </p>
+        <div class="process-steps">
+          <div class="step-item"><i class="fas fa-comments"></i><div class="step-text"><strong>Consultation</strong><small>Discuss your vision, colors, and size</small></div></div>
+          <div class="step-item"><i class="fas fa-paint-brush"></i><div class="step-text"><strong>Creation</strong><small>I paint your artwork over 2–6 weeks</small></div></div>
+          <div class="step-item"><i class="fas fa-box"></i><div class="step-text"><strong>Delivery</strong><small>Shipped worldwide in luxury packaging</small></div></div>
+        </div>
+        <div class="testimonial">
+          <p>“Hana captured the soul of our garden in a way we never thought possible. The painting is now the heart of our home.”</p>
+          <div class="client"><img src="https://i.pravatar.cc/80?img=12" alt="client"><span class="name">Sarah & James, London</span></div>
+        </div>
+        <div class="trust-badge"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 100+ happy collectors worldwide</div>
+      </div>
+
+      <div class="panel panel-center">
+        <div class="gallery-carousel" id="carousel">
+          <div class="carousel-slide active" data-index="0"><img src="img-art/art-8.jpg" alt="custom1"><div class="carousel-overlay"><div class="client-name">Sarah & James, London</div><div class="meta">100×80cm · Oil on canvas · 2024</div></div></div>
+          <div class="carousel-slide" data-index="1"><img src="img-art/art-9.jpg" alt="custom2"><div class="carousel-overlay"><div class="client-name">Elena, Paris</div><div class="meta">70×90cm · Mixed media · 2025</div></div></div>
+          <div class="carousel-slide" data-index="2"><img src="img-art/art-10.jpg" alt="custom3"><div class="carousel-overlay"><div class="client-name">Marcus, Berlin</div><div class="meta">120×80cm · Oil on linen · 2023</div></div></div>
+          <div class="carousel-slide" data-index="3"><img src="img-art/art-11.jpg" alt="custom4"><div class="carousel-overlay"><div class="client-name">Aiko, Tokyo</div><div class="meta">60×60cm · Watercolor · 2025</div></div></div>
+        </div>
+        <div class="carousel-dots" id="carouselDots"><span class="active" data-index="0"></span><span data-index="1"></span><span data-index="2"></span><span data-index="3"></span></div>
+        <div class="gallery-caption">Previous commissions — each one unique</div>
+      </div>
+
+      <div class="panel panel-right">
+        <div class="form-title">Let’s Create</div>
+        <div class="form-sub">Tell me about your vision</div>
+        <div class="progress-bar-wrap"><div class="progress-bar-fill" id="formProgress"></div></div>
+        <form id="commissionForm" novalidate>
+          <div class="form-group"><label>Full name</label><input type="text" class="form-control" id="fullName" placeholder="Your name" required></div>
+          <div class="form-group"><label>Email</label><input type="email" class="form-control" id="email" placeholder="you@example.com" required></div>
+          <div class="form-row">
+            <div class="form-group"><label>Preferred size</label>
+              <select class="form-control" id="sizeSelect"><option value="Small (40x50cm)">Small (40x50cm) – €800+</option><option value="Medium (60x80cm)" selected>Medium (60x80cm) – €1,500+</option><option value="Large (80x100cm)">Large (80x100cm) – €2,500+</option><option value="Custom">Custom Size</option></select>
+            </div>
+            <div class="form-group"><label>Budget (€)</label>
+              <select class="form-control" id="budgetSelect"><option value="500-1000">500 – 1,000</option><option value="1000-2000" selected>1,000 – 2,000</option><option value="2000-4000">2,000 – 4,000</option><option value="4000+">4,000+</option></select>
+            </div>
+          </div>
+          <div class="form-group"><label>Preferred style</label>
+            <div class="radio-group" id="styleGroup">
+              <input type="radio" name="style" id="styleAbstract" value="Abstract"><label for="styleAbstract"><i class="fas fa-palette"></i> Abstract</label>
+              <input type="radio" name="style" id="styleRealistic" value="Realistic" checked><label for="styleRealistic"><i class="fas fa-eye"></i> Realistic</label>
+              <input type="radio" name="style" id="styleImpressionist" value="Impressionist"><label for="styleImpressionist"><i class="fas fa-feather"></i> Impressionist</label>
+              <input type="radio" name="style" id="styleMixed" value="Mixed Media"><label for="styleMixed"><i class="fas fa-cubes"></i> Mixed Media</label>
+            </div>
+          </div>
+          <div class="form-group"><label>Your vision / message</label><textarea class="form-control" id="message" rows="2" placeholder="Colors, emotions, subject…"></textarea></div>
+          <div class="form-group"><label>Upload reference</label>
+            <div class="file-upload-wrap" id="fileDrop"><i class="fas fa-cloud-upload-alt"></i><p style="margin:0.3rem 0 0;font-size:0.75rem;">Drag & drop or click to upload</p><input type="file" id="fileInput" style="display:none" accept="image/*"></div>
+            <div id="filePreview" style="font-size:0.75rem;color:var(--text-soft);margin-top:0.2rem;"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Timeline</label>
+              <select class="form-control" id="timelineSelect"><option value="Flexible">Flexible</option><option value="2-4 weeks">2–4 weeks</option><option value="4-6 weeks" selected>4–6 weeks</option></select>
+            </div>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn"><span class="btn-text">Let’s Create Something Beautiful</span><span class="spinner"><i class="fas fa-spinner"></i></span></button>
+          <div class="disclaimer">I respond within 24 hours. All consultations are free and confidential.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="success-modal" id="successModal">
+  <div class="success-card">
+    <i class="fas fa-check-circle"></i>
+    <h3>Your Vision is on the Way</h3>
+    <p>Thank you! I’ll respond within 24 hours to begin our creative journey.</p>
+    <button onclick="closeSuccess()" style="margin-top:1.2rem;padding:0.5rem 2rem;border-radius:60px;border:1px solid var(--pink-rose);background:transparent;cursor:pointer;">Wonderful</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+<section class="art-in-motion" id="artInMotion">
+  <div class="curator-label">
+    <i class="fas fa-film"></i> <span>In Motion</span> <span class="deco-diamond">✦</span> <span style="opacity:0.5;">cinematic studio</span>
+  </div>
+  <h2 class="section-headline">Art in Motion</h2>
+  <div class="section-sub">watch the poetry of creation unfold · brush & light</div>
+
+  <div class="video-grid" id="videoGrid">
+  </div>
+</section>
+
+<div class="cinema-modal" id="cinemaModal">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+    <video id="modalVideo" controls autoplay muted playsinline></video>
+    <div class="modal-meta">
+      <h2 id="modalTitle">Whispers of Color</h2>
+      <span id="modalDuration">0:45</span>
+    </div>
+  </div>
+</div>
+
+
+
+  <button class="demo-theme-toggle" id="demoThemeToggle" aria-label="Toggle theme">
+    <i class="fas fa-moon" id="demoThemeIcon"></i>
+    <span id="demoThemeLabel">DAY</span>
+  </button>
+
+  <section class="testimonials-section" id="testimonialsSection" aria-label="Client testimonials">
+    <div class="testimonials-header">
+      <h2><i class="fas fa-quote-left"></i> Voices of Collectors</h2>
+      <span class="sub"><i class="fas fa-arrow-right"></i> heartfelt words</span>
+    </div>
+
+    <div class="carousel-wrapper" id="carouselWrapper">
+      <div class="carousel-track" id="carouselTrack" role="list">
+      </div>
+    </div>
+
+    <div class="nav-arrows">
+      <button class="nav-arrow" id="prevArrow" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+      <div class="dots-container" id="dotsContainer" role="tablist"></div>
+      <button class="nav-arrow" id="nextArrow" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+
+
+
+
+    <footer class="footer-section" id="footerSection" role="contentinfo">
+        <div id="footer-particles"></div>
+
+        <div class="footer-inner">
+            <div class="gold-bar" aria-hidden="true">
+                <span class="diamond"></span>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col-1 glass-reflection">
+                    <div class="artist-name">Hana Yeganeh</div>
+                    <div class="title">Visual Artist · London</div>
+                    <p class="bio">Capturing the dialogue between light and shadow, memory and dream. Each canvas is a whispered story.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <div class="heading">Explore</div>
+                    <ul class="link-list">
+                        <li><a href="#"><i class="fas fa-paint-brush"></i> Gallery</a></li>
+                        <li><a href="#"><i class="fas fa-feather-alt"></i> Commission</a></li>
+                        <li><a href="#"><i class="fas fa-user"></i> About</a></li>
+                        <li><a href="#"><i class="fas fa-pen-fancy"></i> Journal</a></li>
+                        <li><a href="#"><i class="fas fa-store"></i> Shop</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-3">
+                    <div class="newsletter-title">Join the Inner Circle</div>
+                    <div class="newsletter-sub">First access to new works, studio news & private views.</div>
+                    <form class="newsletter-form" id="newsletterForm" novalidate>
+                        <div class="input-group">
+                            <input type="email" placeholder="Your email address" aria-label="Email address" required>
+                        </div>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                        <div class="privacy-notice">Your privacy is sacred. No spam, ever.</div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="featured-section">
+                <span class="featured-label">As Featured In</span>
+                <div class="brands">
+                    <span>VOGUE</span>
+                    <span>ARTFORUM</span>
+                    <span>HARPER'S BAZAAR</span>
+                    <span>THE GUARDIAN</span>
+                    <span>SOTHEBY'S</span>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <span>© 2025 Hana Yeganeh. All rights reserved.</span>
+                <span>
+                    <span class="diamond-deco">◆</span>
+                    <span class="made-with">Made with ✦ in London</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+<script src="script.js"></script>
+<script src="slider.js"></script>
+<script src="Commission.js"></script>
+<script src="new.js"></script>
+<script src="new-2.js"></script>
+<script src="footer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</body>
+</html>

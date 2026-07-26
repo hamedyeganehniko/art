@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIANA ROSE • Visual Artist | work</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./work.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/engine@4/tsparticles.engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@4/tsparticles.slim.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER – با لینک‌های واقعی + active خودکار
+     ============================================================ -->
+<header id="mainHeader" role="banner">
+
+  <!-- Gold decorative bar -->
+  <div class="gold-top-bar" aria-hidden="true">
+    <span class="diamond"></span>
+  </div>
+
+  <!-- tsParticles container -->
+  <div id="header-particles"></div>
+
+  <!-- Glow orbs -->
+  <div class="glow-orb"></div>
+  <div class="glow-orb-left"></div>
+
+  <!-- Header inner -->
+  <div class="header-inner">
+    <!-- Top row -->
+    <div class="top-row">
+      <!-- Logo (لینک به صفحه اصلی) -->
+      <a href="index.html" class="logo" id="logoEl" aria-label="Homepage">
+        <span class="artist-name">HANA YEGANEH</span>
+        <span class="subtitle">Visual Artist · London</span>
+      </a>
+
+      <!-- Right group -->
+      <div class="right-group" id="rightGroup">
+        <!-- Search -->
+        <div class="search-container">
+          <div class="search-box" id="searchBox">
+            <i class="fas fa-palette"></i>
+            <input type="text" id="searchInput" placeholder="Search artworks..." aria-label="Search">
+          </div>
+        </div>
+
+        <div class="ctas">
+          <a href="index.html#masonryGallery" class="cta-btn"><i class="fas fa-image"></i> <span>GALLERY</span></a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+          <span class="toggle-label" id="themeLabel">DAY</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="bottom-row" id="bottomNav">
+      <nav>
+        <ul class="nav-list" id="navList">
+          <li class="nav-item" data-page="home">
+            <a href="index.html"><span>HOME</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item active" data-page="works">
+            <a href="work.html"><span>WORKS</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="gallery">
+            <a href="gallery.html"><span>GALLERY</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="about">
+            <a href="about.html"><span>ABOUT</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="journal">
+            <a href="journal.html"><span>JOURNAL</span><span class="nav-dot"></span></a>
+          </li>
+          <li class="nav-item" data-page="contact">
+            <a href="contact.html"><span>CONTACT</span><span class="nav-dot"></span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Scroll progress bar -->
+    <div id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</header>
+
+<!-- ===== MOBILE OVERLAY با لینک‌ها ===== -->
+<div class="mobile-overlay" id="mobileOverlay">
+  <button class="close-overlay" id="closeOverlay" aria-label="Close menu">
+    <i class="fas fa-times"></i>
+  </button>
+  <ul class="mobile-nav" id="mobileNav">
+    <li><a href="index.html">HOME</a></li>
+    <li class="active"><a href="work.html">WORKS</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="journal.html">JOURNAL</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+  <div class="divider"></div>
+  <div style="margin-top:1.2rem; font-family: 'Cinzel', serif; font-size:0.65rem; letter-spacing:0.2em; color:var(--text-soft); opacity:0.6;">
+    <i class="fas fa-palette" style="color:var(--pink-rose); margin-right:8px;"></i> Studio · London
+  </div>
+</div>
+<section class="works-hero" id="worksHero" role="img" aria-label="Hana Yeganeh works exhibition">
+  <div class="works-hero-bg" style="background-image: url('img-art/artist.png');"></div>
+  <div class="works-hero-overlay"></div>
+  <div class="works-hero-glass">
+    <div class="works-hero-content">
+      <div class="works-hero-label">✦ HANA YEGANEH</div>
+      <h1 class="works-hero-title">HANA YEGANEH</h1>
+      <div class="works-hero-sub">Works · 2024–2025</div>
+      <p class="works-hero-desc">
+        Each brushstroke tells a story. Each canvas holds a memory.
+        Explore the collection that defines my artistic journey.
+      </p>
+      <div class="works-hero-divider"></div>
+      <div class="works-hero-actions">
+        <a href="#" class="works-hero-btn primary">Explore Collection</a>
+        <a href="#" class="works-hero-btn secondary">Commissions Open</a>
+      </div>
+    </div>
+  </div>
+  <div class="works-hero-scroll">
+    <span>Scroll</span>
+    <span class="works-hero-scroll-line"></span>
+  </div>
+  <div id="works-hero-particles"></div>
+</section>
+
+</div>
+
+
+
+
+
+<div class="container">
+      <div class="collection-header">
+      <h1 class="collection-heading">Collection</h1>
+      <div class="subtitle"><i class="fas fa-diamond"></i> 2024 — 2025 <i class="fas fa-diamond"></i></div>
+    </div>
+
+    <div class="filter-row" id="filterRow">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="oil">Oil Paintings</button>
+      <button class="filter-btn" data-filter="watercolor">Watercolors</button>
+      <button class="filter-btn" data-filter="mixed">Mixed Media</button>
+      <button class="filter-btn" data-filter="charcoal">Charcoal</button>
+    </div>
+
+    <div class="masonry-grid" id="masonryGrid"></div>
+
+    <div class="load-more-wrap">
+      <button class="load-more" id="loadMoreBtn"><i class="fas fa-plus"></i> Load More</button>
+    </div>
+  </div>
+
+  
+
+
+
+
+
+
+
+  <div class="container">
+  <div class="section-label">
+    <i class="fas fa-diamond"></i> The Process <i class="fas fa-diamond"></i>
+  </div>
+  <h2 class="main-heading">Behind the Canvas</h2>
+  <div class="timeline-wrapper" id="timelineWrapper">
+    <div class="timeline-track" id="timelineTrack">
+      <div class="step-card" data-step="0">
+        <div class="step-number">01</div>
+        <div class="step-title">Inspiration</div>
+        <div class="step-desc">Finding the light, the emotion, the story behind each piece</div>
+      </div>
+      <div class="step-card" data-step="1">
+        <div class="step-number">02</div>
+        <div class="step-title">Sketching</div>
+        <div class="step-desc">First lines, rough ideas, discovering form and composition</div>
+      </div>
+
+      <div class="step-card" data-step="2">
+        <div class="step-number">03</div>
+        <div class="step-title">Painting</div>
+        <div class="step-desc">Layer by layer, color by color, the vision comes to life</div>
+      </div>
+      <div class="step-card" data-step="3">
+        <div class="step-number">04</div>
+        <div class="step-title">Finishing</div>
+        <div class="step-desc">The final touch, the signature, the soul revealed</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+    <span class="quote-text">“Every masterpiece begins with a single stroke.”</span>
+    <span class="quote-icon" style="margin-left:auto;"><i class="fas fa-quote-right"></i></span>
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="section-header">
+    <h2 class="section-heading">Collectors' Voices</h2>
+    <div class="section-sub">
+      <i class="fas fa-heart"></i> What They Say <i class="fas fa-heart" style="opacity:0.4;"></i>
+    </div>
+  </div>
+  <div class="carousel-wrapper" id="carouselWrapper">
+    <div class="carousel-track" id="carouselTrack">
+    </div>
+  </div>
+
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <div class="dots-container" id="dotsContainer"></div>
+    <button class="nav-btn" id="nextBtn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+  <div id="studio-particles"></div>
+
+  <div class="container">
+    <div class="section-label">
+      <i class="fas fa-diamond"></i> Studio <i class="fas fa-diamond"></i>
+    </div>
+    <h2 class="main-heading reveal">Inside the Studio</h2>
+    <div class="studio-grid">
+      <div class="studio-image-wrap reveal reveal-delay-1">
+        <img src="img-art/artist.png" alt="Hana Yeganeh in her studio" loading="lazy" />
+        <div class="glass-overlay-img">
+          <span><i class="fas fa-feather-alt" style="margin-right:8px;"></i> Where light meets canvas</span>
+        </div>
+      </div>
+
+      <div class="studio-text reveal reveal-delay-2">
+        <p class="studio-description">
+          Where the magic happens. A space filled with light, color, and endless possibilities.
+        </p>
+
+        <ul class="tools-list">
+          <li><i class="fas fa-palette"></i> Oil paints from Florence</li>
+          <li><i class="fas fa-layer-group"></i> Hand-stretched linen canvases</li>
+          <li><i class="fas fa-paint-brush"></i> Vintage brushes collection</li>
+          <li><i class="fas fa-sun"></i> Natural light studio in London</li>
+        </ul>
+
+        <button class="visit-btn" onclick="alert('✨ Studio visits available by appointment.')">
+          <i class="fas fa-calendar-check"></i> Visit the Studio
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <footer class="footer-section" id="footerSection" role="contentinfo">
+        <div id="footer-particles"></div>
+
+        <div class="footer-inner">
+            <div class="gold-bar" aria-hidden="true">
+                <span class="diamond"></span>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col-1 glass-reflection">
+                    <div class="artist-name">Hana Yeganeh</div>
+                    <div class="title">Visual Artist · London</div>
+                    <p class="bio">Capturing the dialogue between light and shadow, memory and dream. Each canvas is a whispered story.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <div class="heading">Explore</div>
+                    <ul class="link-list">
+                        <li><a href="#"><i class="fas fa-paint-brush"></i> Gallery</a></li>
+                        <li><a href="#"><i class="fas fa-feather-alt"></i> Commission</a></li>
+                        <li><a href="#"><i class="fas fa-user"></i> About</a></li>
+                        <li><a href="#"><i class="fas fa-pen-fancy"></i> Journal</a></li>
+                        <li><a href="#"><i class="fas fa-store"></i> Shop</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-3">
+                    <div class="newsletter-title">Join the Inner Circle</div>
+                    <div class="newsletter-sub">First access to new works, studio news & private views.</div>
+                    <form class="newsletter-form" id="newsletterForm" novalidate>
+                        <div class="input-group">
+                            <input type="email" placeholder="Your email address" aria-label="Email address" required>
+                        </div>
+                        <button type="submit" class="btn-subscribe">Subscribe</button>
+                        <div class="privacy-notice">Your privacy is sacred. No spam, ever.</div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="featured-section">
+                <span class="featured-label">As Featured In</span>
+                <div class="brands">
+                    <span>VOGUE</span>
+                    <span>ARTFORUM</span>
+                    <span>HARPER'S BAZAAR</span>
+                    <span>THE GUARDIAN</span>
+                    <span>SOTHEBY'S</span>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <span>© 2025 Hana Yeganeh. All rights reserved.</span>
+                <span>
+                    <span class="diamond-deco">◆</span>
+                    <span class="made-with">Made with ✦ in London</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+<script src="script.js"></script>
+<script src="footer.js"></script>
+<script src="work.js"></script>
+<script src="galery-work.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
+</body>
+</html>
