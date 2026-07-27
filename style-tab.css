@@ -1,0 +1,395 @@
+ /* ============================================================ */
+    /* TAB BAR – MOBILE ONLY (hidden > 500px)                      */
+    /* ============================================================ */
+    @media (max-width: 500px) {
+      .sticky-tab-bar {
+        position: fixed;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%) translateY(0);
+        width: calc(100% - 24px);
+        max-width: 420px;
+        height: var(--bar-height);
+        padding: 0.3rem 0.6rem;
+        padding-bottom: max(0.3rem, env(safe-area-inset-bottom, 6px));
+        background: var(--glass-bg);
+        backdrop-filter: blur(32px) saturate(1.4);
+        -webkit-backdrop-filter: blur(32px) saturate(1.4);
+        border: 1px solid var(--glass-border);
+        border-radius: var(--bar-radius);
+        box-shadow: var(--shadow-bar), inset 0 1px 0 rgba(255,255,255,0.06);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease, border-color 0.3s ease;
+        will-change: transform;
+        isolation: isolate;
+        gap: 0.1rem;
+      }
+
+      /* ----- GLASS REFLECTION (soft) ----- */
+      .sticky-tab-bar::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: var(--bar-radius);
+        background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, transparent 40%, transparent 70%, rgba(255,255,255,0.02) 100%);
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      /* subtle glow border */
+      .sticky-tab-bar::before {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        border-radius: calc(var(--bar-radius) + 1px);
+        padding: 1px;
+        background: linear-gradient(135deg, var(--gold), var(--pink-rose), var(--gold));
+        background-size: 300% 300%;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        pointer-events: none;
+        opacity: 0.3;
+        animation: borderShimmer 4s ease-in-out infinite;
+        z-index: 0;
+      }
+
+      @keyframes borderShimmer {
+        0% { background-position: 0% 50%; opacity: 0.2; }
+        50% { background-position: 100% 50%; opacity: 0.5; }
+        100% { background-position: 0% 50%; opacity: 0.2; }
+      }
+
+      /* hidden state (scroll down) */
+      .sticky-tab-bar.hidden {
+        transform: translateX(-50%) translateY(120%);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* ========================================================== */
+      /* INDIVIDUAL TAB – MODERN DESIGN                           */
+      /* ========================================================== */
+      .tab-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.25rem 0.1rem;
+        gap: 1px;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        border: none;
+        background: transparent;
+        font-family: 'Inter', 'Space Grotesk', sans-serif;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        border-radius: 16px;
+        margin: 0 1px;
+        text-decoration: none;
+        outline: none;
+        min-height: 48px;
+        color: inherit;
+        z-index: 2;
+      }
+
+      /* ----- ICON (Phosphor / Modern) ----- */
+      .tab-item i {
+        font-size: clamp(1.3rem, 4vw, 1.6rem);
+        color: var(--text-soft);
+        opacity: 0.4;
+        transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        transform: translateY(0);
+        will-change: transform, opacity, color;
+        position: relative;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      /* Fallback for Font Awesome */
+      .tab-item .fa-solid,
+      .tab-item .fa-regular {
+        font-size: clamp(1.2rem, 3.8vw, 1.5rem);
+      }
+
+      /* ----- LABEL (Modern) ----- */
+      .tab-item .label {
+        font-family: 'Inter', 'Space Grotesk', sans-serif;
+        font-weight: 500;
+        font-size: clamp(0.4rem, 1.4vw, 0.5rem);
+        letter-spacing: 0.06em;
+        color: var(--text-soft);
+        opacity: 0.3;
+        text-transform: uppercase;
+        transition: all 0.4s ease;
+        line-height: 1.2;
+        position: relative;
+      }
+
+      /* ========================================================== */
+      /* ACTIVE STATE – MODERN & CLEAN                            */
+      /* ========================================================== */
+      .tab-item.active {
+        background: rgba(255, 71, 133, 0.06);
+        border-radius: 16px;
+      }
+
+      .tab-item.active i {
+        color: var(--pink-rose);
+        opacity: 1;
+        transform: scale(1.15) translateY(-2px);
+        filter: drop-shadow(0 0 16px rgba(255, 71, 133, 0.3));
+      }
+
+      .tab-item.active .label {
+        color: var(--pink-rose);
+        opacity: 0.9;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+      }
+
+      /* ----- Modern Dot Indicator (minimal) ----- */
+      .tab-item.active .dot {
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--pink-rose);
+        box-shadow: 0 0 20px rgba(255, 71, 133, 0.4);
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .tab-item:not(.active) .dot {
+        transform: translateX(-50%) scale(0);
+        opacity: 0;
+      }
+
+      /* ----- Subtle Glow (instead of big aura) ----- */
+      .tab-item.active .glow {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: radial-gradient(circle, rgba(255, 71, 133, 0.06), transparent 70%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: -1;
+        opacity: 0.8;
+      }
+
+      /* ========================================================== */
+      /* HOVER / TOUCH EFFECTS                                     */
+      /* ========================================================== */
+      .tab-item:hover i {
+        color: var(--pink-rose);
+        opacity: 0.7;
+        transform: scale(1.05) translateY(-1px);
+      }
+      .tab-item:hover .label {
+        opacity: 0.5;
+        color: var(--pink-rose);
+      }
+      .tab-item:hover {
+        background: rgba(255, 71, 133, 0.03);
+      }
+
+      /* ========================================================== */
+      /* CLICK FEEDBACK – PRESS + RIPPLE                           */
+      /* ========================================================== */
+      .tab-item.pressed {
+        animation: pressPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      @keyframes pressPop {
+        0% { transform: scale(0.88); }
+        100% { transform: scale(1); }
+      }
+
+      /* ----- RIPPLE (modern, soft) ----- */
+      .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 71, 133, 0.15), transparent 70%);
+        transform: scale(0);
+        animation: rippleAnim 0.6s ease-out forwards;
+        pointer-events: none;
+        z-index: 5;
+      }
+
+      @keyframes rippleAnim {
+        0% { transform: scale(0); opacity: 0.6; }
+        100% { transform: scale(2.5); opacity: 0; }
+      }
+
+      /* ========================================================== */
+      /* PARTICLE BURST (minimal, gold)                            */
+      /* ========================================================== */
+      .particle {
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: particleFly 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        z-index: 99999;
+        will-change: transform, opacity;
+      }
+
+      .particle.diamond {
+        border-radius: 2px;
+        transform: rotate(45deg);
+      }
+
+      @keyframes particleFly {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+      }
+
+      /* ========================================================== */
+      /* RESPONSIVE – HIDE LABELS ON SMALL SCREENS                  */
+      /* ========================================================== */
+      @media (max-width: 400px) {
+        .sticky-tab-bar {
+          height: 62px;
+          padding: 0.2rem 0.3rem;
+          bottom: 12px;
+          border-radius: 22px;
+        }
+        .tab-item .label {
+          display: none;
+        }
+        .tab-item i {
+          font-size: 1.4rem;
+        }
+        .tab-item {
+          min-height: 40px;
+        }
+        .tab-item.active .dot {
+          width: 4px;
+          height: 4px;
+          bottom: 1px;
+        }
+        .tab-item.active .glow {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      @media (max-width: 350px) {
+        .sticky-tab-bar {
+          height: 54px;
+          padding: 0.1rem 0.2rem;
+          border-radius: 18px;
+          bottom: 8px;
+        }
+        .tab-item i {
+          font-size: 1.2rem;
+        }
+        .tab-item {
+          min-height: 36px;
+        }
+        .tab-item.active .glow {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    /* ===== HIDDEN ON DESKTOP / TABLET ===== */
+    @media (min-width: 501px) {
+      .sticky-tab-bar {
+        display: none !important;
+      }
+    }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      .sticky-tab-bar::before,
+      .sticky-tab-bar::after,
+      .tab-item.active i,
+      .tab-item.active .glow,
+      .tab-item.active .dot,
+      .particle {
+        animation: none !important;
+        transition: none !important;
+      }
+      .sticky-tab-bar.hidden {
+        transition: none !important;
+      }
+    }
+
+    /* ============================================================ */
+    /* DEMO CONTENT                                                 */
+    /* ============================================================ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 300vh;
+      padding: 0 1rem;
+      transition: background 0.4s ease, color 0.3s ease;
+    }
+    .demo-section {
+      max-width: 600px;
+      margin: 6rem auto;
+      padding: 3rem 2rem;
+      border-radius: 32px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.04);
+      text-align: center;
+    }
+    .demo-section h2 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--gold), var(--pink-rose));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .demo-section p {
+      font-size: 1rem;
+      opacity: 0.6;
+      margin-top: 0.5rem;
+    }
+    .spacer { height: 20vh; }
+
+    .theme-toggle-demo {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 60px;
+      padding: 0.4rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      transition: 0.3s;
+    }
+    .theme-toggle-demo i { color: var(--pink-rose); }
+    .theme-toggle-demo:hover { border-color: var(--gold); transform: scale(1.02); }
+
+    @media (max-width: 500px) {
+      body { padding-bottom: 100px; }
+    }
