@@ -3,18 +3,18 @@
 
       // ----- SLIDE IMAGES (12 artworks) -----
       const images = [
-        'img-art/art-1.jpg',
-        'img-art/art-2.jpg',
-        'img-art/art-3.jpg',
-        'img-art/art-4.jpg',
-        'img-art/art-5.jpg',
-        'img-art/art-6.jpg',
-        'img-art/art-7.jpg',
-        'img-art/art-8.jpg',
-        'img-art/art-9.jpg',
-        'img-art/art-10.jpg',
-        'img-art/art-11.jpg',
-        'img-art/art-12.jpg'
+        'art-1.jpg',
+        'art-2.jpg',
+        'art-3.jpg',
+        'art-4.jpg',
+        'art-5.jpg',
+        'art-6.jpg',
+        'art-7.jpg',
+        'art-8.jpg',
+        'art-9.jpg',
+        'art-10.jpg',
+        'art-11.jpg',
+        'art-12.jpg'
       ];
 
       const slideshow = document.getElementById('heroSlideshow');
@@ -194,22 +194,22 @@
 
       // ---------- ARTWORK DATA (16 pieces) ----------
       const allArtworks = [
-        { title: 'Ethereal Bloom', year: '2025', technique: 'Oil on canvas', img: 'img-art/art-1.jpg' },
-        { title: 'Golden Hour', year: '2024', technique: 'Oil on linen', img: 'img-art/art-2.jpg' },
-        { title: 'Rose Noir', year: '2025', technique: 'Watercolor', img: 'img-art/art-3.jpg' },
-        { title: 'Silent Poetry', year: '2024', technique: 'Mixed media', img: 'img-art/art-4.jpg' },
-        { title: 'Veiled Light', year: '2023', technique: 'Charcoal', img: 'img-art/art-5.jpg' },
-        { title: 'Mist & Petal', year: '2025', technique: 'Watercolor', img: 'img-art/art-6.jpg' },
-        { title: 'Golden Echo', year: '2024', technique: 'Mixed media', img: 'img-art/art-7.jpg' },
-        { title: 'Dreamweaver', year: '2025', technique: 'Oil on canvas', img: 'img-art/art-8.jpg' },
-        { title: 'Scarlet Whisper', year: '2024', technique: 'Oil on linen', img: 'img-art/art-9.jpg' },
-        { title: 'Twilight Sonata', year: '2025', technique: 'Acrylic', img: 'img-art/art-10.jpg' },
-        { title: 'Aether', year: '2023', technique: 'Mixed media', img: 'img-art/art-11.jpg' },
-        { title: 'Eternal Spring', year: '2025', technique: 'Watercolor', img: 'img-art/art-12.jpg' },
-        { title: 'Whispering Shadows', year: '2024', technique: 'Charcoal', img: 'img-art/art-13.jpg' },
-        { title: 'Crimson Tide', year: '2025', technique: 'Oil on canvas', img: 'img-art/art-14.jpg' },
-        { title: 'Silver Lining', year: '2024', technique: 'Mixed media', img: 'img-art/art-15.jpg' },
-        { title: 'Midnight Bloom', year: '2025', technique: 'Watercolor', img: 'img-art/art-16.jpg' }
+        { title: 'Ethereal Bloom', year: '2025', technique: 'Oil on canvas', img: 'art-1.jpg' },
+        { title: 'Golden Hour', year: '2024', technique: 'Oil on linen', img: 'art-2.jpg' },
+        { title: 'Rose Noir', year: '2025', technique: 'Watercolor', img: 'art-3.jpg' },
+        { title: 'Silent Poetry', year: '2024', technique: 'Mixed media', img: 'art-4.jpg' },
+        { title: 'Veiled Light', year: '2023', technique: 'Charcoal', img: 'art-5.jpg' },
+        { title: 'Mist & Petal', year: '2025', technique: 'Watercolor', img: 'art-6.jpg' },
+        { title: 'Golden Echo', year: '2024', technique: 'Mixed media', img: 'art-7.jpg' },
+        { title: 'Dreamweaver', year: '2025', technique: 'Oil on canvas', img: 'art-8.jpg' },
+        { title: 'Scarlet Whisper', year: '2024', technique: 'Oil on linen', img: 'art-9.jpg' },
+        { title: 'Twilight Sonata', year: '2025', technique: 'Acrylic', img: 'art-10.jpg' },
+        { title: 'Aether', year: '2023', technique: 'Mixed media', img: 'art-11.jpg' },
+        { title: 'Eternal Spring', year: '2025', technique: 'Watercolor', img: 'art-12.jpg' },
+        { title: 'Whispering Shadows', year: '2024', technique: 'Charcoal', img: 'art-13.jpg' },
+        { title: 'Crimson Tide', year: '2025', technique: 'Oil on canvas', img: 'art-14.jpg' },
+        { title: 'Silver Lining', year: '2024', technique: 'Mixed media', img: 'art-15.jpg' },
+        { title: 'Midnight Bloom', year: '2025', technique: 'Watercolor', img: 'art-16.jpg' }
       ];
 
       // ---------- DOM refs ----------
