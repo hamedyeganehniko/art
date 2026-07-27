@@ -269,27 +269,27 @@
       {
         title: 'Ethereal Beauty',
         subtitle: 'Where light dances on velvet petals',
-        img: 'hero-slider/bg-slide1.png',
+        img: 'bg-slide1.jpg',
       },
       {
         title: 'Golden Hour',
         subtitle: 'Gilded whispers of the dying sun',
-        img: 'hero-slider/bg-slide2.png',
+        img: 'bg-slide2.jpg',
       },
       {
         title: 'Rose Noir',
         subtitle: 'Mystery blooms in shadow and silk',
-        img: 'hero-slider/bg-slide3.png',
+        img: 'bg-slide3.jpg',
       },
       {
         title: 'Silent Poetry',
         subtitle: 'A canvas of unspoken verses',
-        img: 'hero-slider/bg-slide4.jpg',
+        img: 'bg-slide4.jpg',
       },
       {
         title: 'Eternal Bloom',
         subtitle: 'Beauty that outlasts the seasons',
-        img: 'hero-slider/bg-slide5.jpg',
+        img: 'bg-slide5.jpg',
       }
     ];
 
@@ -527,18 +527,18 @@
     'use strict';
 
     const artworks = [
-      { title: 'Ethereal Bloom', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-1.jpg' },
-      { title: 'Golden Hour', year: '2024', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-2.jpg' },
-      { title: 'Rose Noir', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-3.jpg' },
-      { title: 'Silent Poetry', year: '2024', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-4.jpg' },
-      { title: 'Veiled Light', year: '2023', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-5.jpg' },
-      { title: 'Mist & Petal', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-6.jpg' },
-      { title: 'Golden Echo', year: '2024', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-7.jpg' },
-      { title: 'Dreamweaver', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-8.jpg' },
-      { title: 'Scarlet Whisper', year: '2024', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-9.jpg' },
-      { title: 'Twilight Sonata', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-10.jpg' },
-      { title: 'Aether', year: '2023', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-11.jpg' },
-      { title: 'Eternal Spring', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'img-art/art-12.jpg' }
+      { title: 'Ethereal Bloom', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-1.jpg' },
+      { title: 'Golden Hour', year: '2024', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-2.jpg' },
+      { title: 'Rose Noir', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-3.jpg' },
+      { title: 'Silent Poetry', year: '2024', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-4.jpg' },
+      { title: 'Veiled Light', year: '2023', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-5.jpg' },
+      { title: 'Mist & Petal', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-6.jpg' },
+      { title: 'Golden Echo', year: '2024', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-7.jpg' },
+      { title: 'Dreamweaver', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-8.jpg' },
+      { title: 'Scarlet Whisper', year: '2024', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-9.jpg' },
+      { title: 'Twilight Sonata', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-10.jpg' },
+      { title: 'Aether', year: '2023', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-11.jpg' },
+      { title: 'Eternal Spring', year: '2025', technique: 'Category: Hyper-realism or Charcoal Drawing', img: 'art-12.jpg' }
     ];
 
     const grid = document.getElementById('masonryGrid');
