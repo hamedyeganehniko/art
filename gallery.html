@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELIANA ROSE • Visual Artist | about</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="gallery.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="./gallery.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./style-tab.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
@@ -17,6 +18,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- ===== MODERN FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ===== MODERN ICON PACK: Phosphor Icons (via CDN) ===== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <!-- ===== FALLBACK: Font Awesome 6 Sharp (Modern) ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 <header id="mainHeader" role="banner">
@@ -208,11 +216,63 @@
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+  <nav class="sticky-tab-bar" id="stickyTabBar" role="tablist" aria-label="Quick navigation">
 
+    <!-- HOME → index.html -->
+    <a href="index.html" class="tab-item" data-page="home" role="tab" aria-selected="true" tabindex="0">
+      <i class="ph ph-house"></i>
+      <span class="label">Home</span>
+      <span class="glow"></span>
+      <span class="dot"></span>
+    </a>
+
+    <!-- WORKS → work.html -->
+    <a href="work.html" class="tab-item" data-page="works" role="tab" aria-selected="false" tabindex="0">
+      <i class="ph ph-paint-brush"></i>
+      <span class="label">Works</span>
+      <span class="glow"></span>
+      <span class="dot"></span>
+    </a>
+
+    <!-- GALLERY → gallery.html -->
+    <a href="gallery.html" class="tab-item" data-page="gallery" role="tab" aria-selected="false" tabindex="0">
+      <i class="ph ph-images"></i>
+      <span class="label">Gallery</span>
+      <span class="glow"></span>
+      <span class="dot"></span>
+    </a>
+
+    <!-- ABOUT → about.html -->
+    <a href="about.html" class="tab-item" data-page="about" role="tab" aria-selected="false" tabindex="0">
+      <i class="ph ph-user"></i>
+      <span class="label">About</span>
+      <span class="glow"></span>
+      <span class="dot"></span>
+    </a>
+
+    <!-- JOURNAL → journal.html -->
+    <a href="journal.html" class="tab-item" data-page="journal" role="tab" aria-selected="false" tabindex="0">
+      <i class="ph ph-note-pencil"></i>
+      <span class="label">Journal</span>
+      <span class="glow"></span>
+      <span class="dot"></span>
+    </a>
+
+    <!-- CONTACT → contact.html -->
+    <a href="contact.html" class="tab-item" data-page="contact" role="tab" aria-selected="false" tabindex="0">
+      <i class="ph ph-envelope"></i>
+      <span class="label">Contact</span>
+      <span class="glow"></span>
+      <span class="dot"></span>
+    </a>
+
+  </nav>
+    
 
 <script src="script.js"></script>
 <script src="gallery.js"></script>
 <script src="footer.js"></script>
+<script src="js-tab.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </body>
