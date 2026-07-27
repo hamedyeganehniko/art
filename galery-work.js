@@ -3,18 +3,18 @@
 
       // ----- DATA -----
       const artworks = [
-        { title: 'Ethereal Bloom', technique: 'Oil on canvas', year: '2025', category: 'oil', img: 'img-art/art-1.jpg' },
-        { title: 'Golden Hour', technique: 'Oil on linen', year: '2024', category: 'oil', img: 'img-art/art-2.jpg' },
-        { title: 'Rose Noir', technique: 'Watercolor', year: '2025', category: 'watercolor', img: 'img-art/art-3.jpg' },
-        { title: 'Silent Poetry', technique: 'Mixed media', year: '2024', category: 'mixed', img: 'img-art/art-4.jpg' },
-        { title: 'Veiled Light', technique: 'Charcoal', year: '2023', category: 'charcoal', img: 'img-art/art-5.jpg' },
-        { title: 'Mist & Petal', technique: 'Watercolor', year: '2025', category: 'watercolor', img: 'img-art/art-6.jpg' },
-        { title: 'Golden Echo', technique: 'Mixed media', year: '2024', category: 'mixed', img: 'img-art/art-7.jpg' },
-        { title: 'Dreamweaver', technique: 'Oil on canvas', year: '2025', category: 'oil', img: 'img-art/art-8.jpg' },
-        { title: 'Scarlet Whisper', technique: 'Oil on linen', year: '2024', category: 'oil', img: 'img-art/art-9.jpg' },
-        { title: 'Twilight Sonata', technique: 'Acrylic', year: '2025', category: 'oil', img: 'img-art/art-10.jpg' },
-        { title: 'Aether', technique: 'Mixed media', year: '2023', category: 'mixed', img: 'img-art/art-11.jpg' },
-        { title: 'Eternal Spring', technique: 'Watercolor', year: '2025', category: 'watercolor', img: 'img-art/art-12.jpg' }
+        { title: 'Ethereal Bloom', technique: 'Oil on canvas', year: '2025', category: 'oil', img: 'art-1.jpg' },
+        { title: 'Golden Hour', technique: 'Oil on linen', year: '2024', category: 'oil', img: 'art-2.jpg' },
+        { title: 'Rose Noir', technique: 'Watercolor', year: '2025', category: 'watercolor', img: 'art-3.jpg' },
+        { title: 'Silent Poetry', technique: 'Mixed media', year: '2024', category: 'mixed', img: 'art-4.jpg' },
+        { title: 'Veiled Light', technique: 'Charcoal', year: '2023', category: 'charcoal', img: 'art-5.jpg' },
+        { title: 'Mist & Petal', technique: 'Watercolor', year: '2025', category: 'watercolor', img: 'art-6.jpg' },
+        { title: 'Golden Echo', technique: 'Mixed media', year: '2024', category: 'mixed', img: 'art-7.jpg' },
+        { title: 'Dreamweaver', technique: 'Oil on canvas', year: '2025', category: 'oil', img: 'art-8.jpg' },
+        { title: 'Scarlet Whisper', technique: 'Oil on linen', year: '2024', category: 'oil', img: 'art-9.jpg' },
+        { title: 'Twilight Sonata', technique: 'Acrylic', year: '2025', category: 'oil', img: 'art-10.jpg' },
+        { title: 'Aether', technique: 'Mixed media', year: '2023', category: 'mixed', img: 'art-11.jpg' },
+        { title: 'Eternal Spring', technique: 'Watercolor', year: '2025', category: 'watercolor', img: 'art-12.jpg' }
       ];
 
       const grid = document.getElementById('masonryGrid');
