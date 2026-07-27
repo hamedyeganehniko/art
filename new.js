@@ -3,12 +3,12 @@
 
     // ----- VIDEO DATA -----
     const videos = [
-      { title: 'Whispers of Color', desc: 'Oil paint swirling on canvas', duration: '0:45', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'img-art/art-1.jpg' },
-      { title: 'Golden Hour Palette', desc: 'Mixing warm amber and rose', duration: '1:12', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'img-art/art-2.jpg' },
-      { title: 'Dancing Brushes', desc: 'Expressive brushstrokes in motion', duration: '0:32', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'img-art/art-3.jpg' },
-      { title: 'Petals in Ink', desc: 'Watercolor bleeding like morning dew', duration: '0:58', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'img-art/art-4.jpg' },
-      { title: 'Light & Shadow', desc: 'Charcoal sketching with dramatic lighting', duration: '1:05', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'img-art/art-5.jpg' },
-      { title: 'Soul of the Canvas', desc: 'The final, emotional strokes', duration: '0:48', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'img-art/art-6.jpg' }
+      { title: 'Whispers of Color', desc: 'Oil paint swirling on canvas', duration: '0:45', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'art-1.jpg' },
+      { title: 'Golden Hour Palette', desc: 'Mixing warm amber and rose', duration: '1:12', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'art-2.jpg' },
+      { title: 'Dancing Brushes', desc: 'Expressive brushstrokes in motion', duration: '0:32', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'art-3.jpg' },
+      { title: 'Petals in Ink', desc: 'Watercolor bleeding like morning dew', duration: '0:58', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'art-4.jpg' },
+      { title: 'Light & Shadow', desc: 'Charcoal sketching with dramatic lighting', duration: '1:05', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'art-5.jpg' },
+      { title: 'Soul of the Canvas', desc: 'The final, emotional strokes', duration: '0:48', src: 'https://www.w3schools.com/html/mov_bbb.mp4', thumb: 'art-6.jpg' }
     ];
 
     const grid = document.getElementById('videoGrid');
