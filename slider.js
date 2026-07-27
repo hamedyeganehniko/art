@@ -55,7 +55,7 @@
           front.className = 'card-front';
           const img = document.createElement('img');
           img.className = 'art-img';
-          img.src = `./img-art/art-${idx + 1}.jpg`;
+          img.src = `./art-${idx + 1}.jpg`;
           img.alt = art.title;
           img.loading = 'lazy';
           front.appendChild(img);
